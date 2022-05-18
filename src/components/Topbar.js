@@ -1,5 +1,5 @@
 
-const Topbar = () => {
+const Topbar = ({children}) => {
     return (
         <header style={{
             display: 'flex',
@@ -12,7 +12,7 @@ const Topbar = () => {
             top: '0',
             right: '0',         
         }}>
-            <span style={{ color: '#E8833A', fontSize:'34px' }}>CINEFLEX</span>
+            <span style={{ color: '#E8833A', fontSize:'34px' }}>{children}</span>
         </header>
     );
 };

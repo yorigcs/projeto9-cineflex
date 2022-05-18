@@ -1,0 +1,30 @@
+.days {
+    margin-left: 15px;
+    margin-bottom: 150px;
+}
+
+.days span {
+    font-size: 20px;
+}
+
+.times{
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.time {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E8833A;
+    width: 84px;
+    height: 44px;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+a {
+    text-decoration: none;
+}

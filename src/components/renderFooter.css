@@ -1,0 +1,31 @@
+footer {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    height: 118px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #DFE6ED;
+    border: 1px solid #9EADBA;
+}
+
+footer span {
+    font-size: 26px;
+}
+
+.minImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    height: 90px;
+    width: 64px;
+    margin-left: 10px;
+}
+
+.minImg > img {
+    width: 48px;
+    height: 72px;
+}

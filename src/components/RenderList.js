@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import api from "./services/api";
 
 import './renderList.css';
@@ -9,9 +10,9 @@ const RenderList = () => {
     useEffect(() => {
         api
             .get('/movies')
-            .then((response) => setList(response.data))
+            .then((response) => setList([...response.data]))
             .catch((error) => {
-                console.error("ops! ocorreu um erro" + error);
+                console.error("Ocorreu um erro" + error);
             });
     }, []);
 
@@ -21,10 +22,9 @@ const RenderList = () => {
             <ul className="items">
                 {list.map((item) => (
                     <li className="item-border" key={item.id}>
-                        <Movie
-                            title={item.title}
-                            posterURL={item.posterURL}
-                        />
+                        <Link to={`/sessoes/${item.id}`} >
+                            <Movie {...item} />
+                        </Link>
                     </li>
                 ))}
             </ul>
@@ -37,7 +37,7 @@ const RenderList = () => {
 
 const Movie = ({ id, title, overview, posterURL, releaseDate }) => {
     return (
-        <img style={{width: '130px',height:'194px'}} src={posterURL} alt={title}></img>
+        <img style={{ width: '130px', height: '194px' }} src={posterURL} alt={title}></img>
     );
 };
 
