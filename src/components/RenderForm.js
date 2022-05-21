@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import './renderForm.css';
 import api from './services/api';
 const RenderForm = ({ selectedSeats, info, SetSucessInfo }) => {
+    const { idSessao } = useParams();
     let navigate = useNavigate();
     const [values, setValues] = useState({ name: '', cpf: '' });
 
@@ -22,7 +23,6 @@ const RenderForm = ({ selectedSeats, info, SetSucessInfo }) => {
             name: values.name,
             cpf: values.cpf,
         };
-        console.log(data);
         api
             .post('/seats/book-many', data)
             .then(res => {
@@ -31,7 +31,8 @@ const RenderForm = ({ selectedSeats, info, SetSucessInfo }) => {
                     userName: data.name,
                     cpf: data.cpf,
                     seats: selectedSeats.map(x => x.seat),
-                    ...info
+                    ...info,
+                    idSessao: idSessao
                 });
 
                 navigate("../sucesso", { replace: true });

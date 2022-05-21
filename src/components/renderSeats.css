@@ -34,3 +34,19 @@
     background-color: #FBE192;
     border: 1px solid #F7C52B;
 }
+
+.buttonTypes {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonTypes span {
+    font-size: 13px;
+}
+
+.buttonTypes li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

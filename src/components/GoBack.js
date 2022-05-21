@@ -3,7 +3,7 @@ import './goBack.css';
 const GoBack = ({to}) => {
     let navigate = useNavigate();
     const handleClick = () => {
-        navigate(to, {replace: true});
+        to ? navigate(to, {replace: true}) : navigate(-1);
     };
 
     return (

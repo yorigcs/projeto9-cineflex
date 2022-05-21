@@ -19,13 +19,13 @@ const RenderDates = () => {
                 setDateTimes([...response.data.days]);
                 setInfo({ title: response.data.title, posterURL: response.data.posterURL });
             })
-            .catch((error) => { console.error('Ocorreu um erro: ' + error) });
+            .catch((error) => { console.log('Ocorreu um erro: ' + error) });
 
     }, [idMovie]);
 
     return (
         <>
-            <GoBack to={'../'} />
+            <GoBack />
             <main>
                 <h1>Selecione o horário</h1>
 
