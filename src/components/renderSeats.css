@@ -18,16 +18,19 @@
 }
 
 .selected {
+    cursor: pointer;
     background-color: #8DD7CF;
     border: 1px solid #1AAE9E;
 }
 
 .available {
+    cursor: pointer;
     background-color: #C3CFD9;
     border: 1px solid #7B8B99;
 }
 
 .unavailable {
+    cursor: not-allowed;
     background-color: #FBE192;
     border: 1px solid #F7C52B;
 }

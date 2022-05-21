@@ -1,0 +1,39 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 225px;
+    height: 42px;
+    background-color: #E8833A;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 150px;
+}
+
+label{
+    display:block;
+    font-size: 18px;
+    margin-top:  8px;
+}
+
+form div input {
+ width: 328px;
+ height: 50px;
+ border: 1px solid #D5D5D5;
+ border-radius: 4px;
+ font-size: 18px;
+ padding-left: 15px;
+}

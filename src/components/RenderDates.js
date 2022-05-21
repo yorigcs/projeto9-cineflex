@@ -3,11 +3,14 @@ import { Link, useParams } from "react-router-dom";
 import api from "./services/api";
 import './renderDates.css';
 import RenderFooter from "./RenderFooter";
+import GoBack from "./GoBack";
 
 const RenderDates = () => {
+   
     const [dateTimes, setDateTimes] = useState([]);
     const [info, setInfo] = useState({});
     const { idMovie } = useParams();
+
 
     useEffect(() => {
         api
@@ -22,6 +25,7 @@ const RenderDates = () => {
 
     return (
         <>
+            <GoBack to={'../'} />
             <main>
                 <h1>Selecione o horário</h1>
 

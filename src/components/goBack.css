@@ -1,0 +1,12 @@
+.goBackButton {
+    cursor: pointer;
+    position: fixed;
+    top: 24px;
+    left: 6px;
+    width: 50px;
+    border: none;
+    background-color: #E8833A;
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}

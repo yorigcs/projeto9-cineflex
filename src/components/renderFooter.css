@@ -11,7 +11,8 @@ footer {
     border: 1px solid #9EADBA;
 }
 
-footer span {
+footer span,
+footer p {
     font-size: 26px;
 }
 

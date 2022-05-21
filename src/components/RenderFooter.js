@@ -1,14 +1,22 @@
 import './renderFooter.css';
 
 
-const RenderFooter = ({title,posterURL}) => {
+const RenderFooter = ({ title, posterURL, day, time }) => {
     return (
         <footer>
             <div className='minImg'>
-            <img src={posterURL} alt={title}></img>
+                <img src={posterURL} alt={title}></img>
             </div>
             <div>
-                <span>{title}</span>
+                {(day && time)
+                    ?
+                    <>
+                        <p>{title}</p>
+                        <span>{day} - {time}</span>
+                    </>
+                    :
+                    <span>{title}</span>
+                }
             </div>
         </footer>
     );

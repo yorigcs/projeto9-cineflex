@@ -1,0 +1,39 @@
+.info {
+    margin-left: 15px;
+    margin-top:  40px;
+}
+.title {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    color: #247A6B;
+    font-size: 24px;
+    font-weight: 700;
+    
+}
+.title h1 {
+    text-align: center;
+    width: 150px;
+}
+.info span{
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+.info  p {
+    font-size: 22px;
+}
+
+.info div {
+    margin-bottom: 20px;
+}
+
+.info div div,
+.info ul {
+    margin-top: 20px;
+}
+.info p {
+    margin: 4px 0
+}
+
