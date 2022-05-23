@@ -6,12 +6,24 @@ const RenderForm = ({ selectedSeats, info, SetSucessInfo }) => {
     const { idSessao } = useParams();
     let navigate = useNavigate();
     const [values, setValues] = useState({ name: '', cpf: '' });
+    const [isValidCPF,setIsValidCPF] = useState(false);
 
     const handleChange = (event) => {
         setValues({
             ...values,
             [event.target.name]: event.target.value
         });
+
+        if(event.target.name === 'cpf') {
+            // eslint-disable-next-line no-useless-escape
+            const cpfReg = new RegExp('[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}');
+            if((event.target.value).match(cpfReg)) {
+                setIsValidCPF(true);
+            } else {
+                setIsValidCPF(false);
+            }
+        }
+        
     };
 
 
@@ -51,10 +63,12 @@ const RenderForm = ({ selectedSeats, info, SetSucessInfo }) => {
             <div>
                 <label htmlFor='cpf'>CPF do comprador:</label>
                 <input type='text' id='cpf' name='cpf' value={values.cpf} onChange={handleChange} placeholder="Digite seu CPF..." required></input>
+                {isValidCPF ? null :  <span>O cpf está inválido</span>}
             </div>
+            
 
 
-            <button type="submit" className='button' disabled={selectedSeats.length === 0 ? true : false} >Reservar assento(s)</button>
+            <button type="submit" className='button' disabled={(selectedSeats.length === 0 || !isValidCPF) ? true : false} >Reservar assento(s)</button>
         </form>
 
     );
